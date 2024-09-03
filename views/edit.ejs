@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tiempo de Llegada</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Editar Tiempo de Llegada de un Bus</h1>
+    <form action="/edit" method="post">
+        <label for="placa">Placa del Bus:</label>
+        <input type="text" name="placa" required>
+
+        <label for="nuevoTiempoLlegada">Nuevo Tiempo de Llegada:</label>
+        <input type="text" name="nuevoTiempoLlegada" required>
+
+        <button type="submit">Actualizar</button>
+    </form>
+
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

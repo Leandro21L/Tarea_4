@@ -1,0 +1,10 @@
+{
+    "abc123": {
+        "tiempoLlegada": "6",
+        "ediciones": 2
+    },
+    "abc111": {
+        "tiempoLlegada": "4",
+        "ediciones": 1
+    }
+}

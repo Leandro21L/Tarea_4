@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Buses</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Registro de Buses</h1>
+
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+
+    <form action="/register" method="post">
+        <label for="placa">Placa del Bus:</label>
+        <input type="text" name="placa" required>
+        <label for="tiempoLlegada">Tiempo de Llegada:</label>
+        <input type="text" name="tiempoLlegada" required>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <h2>Listado de Buses</h2>
+    <ul>
+        <% for (let placa in buses) { %>
+            <li><%= placa %> - Llegada: <%= buses[placa].tiempoLlegada %> - Editado: <%= buses[placa].ediciones %> veces</li>
+        <% } %>
+    </ul>
+
+    <a href="/search">Buscar un bus</a>
+    <a href="/edit">Editar un bus</a>
+    <a href="/delete">Borrar un bus</a>
+    
+</body>
+</html>
